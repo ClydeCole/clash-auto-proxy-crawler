@@ -7,21 +7,21 @@
 
 ## 關於專案
 
-使用這個專案，你可以在Python 爬蟲中接入**Clash Verge** 的代理，並實現自動隨機切換。
+使用這個專案，你可以在Python 爬蟲中接入**Clash Verge** 的代理，並實現自動隨機切換
 
 ## 如何使用
 
-- 第一步，下載jq工具
+**Step 1:** 下載jq工具
 
 ```bash
 sudo pacman -S jq # Arch Linux
 sudo apt install jq # Debian/Ubuntu
 ```
 
-- 第二步，請編輯 `random-switch.sh` 檔案中的 **Configurations** 設定。
-  - 若你不確定 **Configurations** 如何填寫，請參考 [clash-setting.md](clash-setting-CN.md) 文件。
+**Step 2:** 請編輯 `random-switch.sh` 檔案中的 **Configurations** 設定  
+若你不確定 **Configurations** 如何填寫，請參考 [clash-setting.md](clash-setting-CN.md) 文件
 
-- 接著，請在你的爬蟲程式中加入此函式。
+**Step 3:** 請在你的爬蟲程式中加入此函式
 
 ```python 
 import subprocess
@@ -40,7 +40,7 @@ def switch_proxy():
 # 會在每次執行函數時輸出切換到哪一個節點
 ```
 
-- 即可在程式內直接透過該函式進行節點切換。
+現在，即可在程式內直接透過該函式進行節點切換：
 
 ```python
 if __name__ == '__main__':
@@ -49,24 +49,29 @@ if __name__ == '__main__':
 		print(requests.get("https://ifconfig.me/").text)
 ```
 
-- 執行效果
+### 執行效果
 
-  ![run effect](photo/run-effect.png)
+![run effect](photo/run-effect.png)
+
+------
 
 ## 注意事項
 
-- 在使用此函式前，請先將Clash Verge 的節點切換至 **GROUP_NAME** 所設定的代理組。  
-這是**必要步驟**，否則函式將無法正常切換節點。
+- 在使用此函式前，請先將Clash Verge 的節點切換至 **GROUP_NAME** 所設定的代理組  
+這是**必要步驟**，否則函式將無法正常切換節點
 
-- 該專案由於使用的shell腳本來切換節點，因此暫時僅適用於Linux
-   - MacOS使用者需要自行修改部分代碼
+- 該專案由於使用的shell腳本來切換節點，因此暫時僅適用於Linux  
+MacOS使用者需要自行修改部分代碼
 
 - 需要下載jq 工具，否者無法執行shell代碼
 
+------
 
 ### LICENSE
 
 [MIT License](LICENSE)
+
+------
 
 ###  參與貢獻 與 幫助
 
