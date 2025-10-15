@@ -19,7 +19,7 @@ sudo apt install jq # Debian/Ubuntu
 ```
 
 - 第二步，請編輯 `random-switch.sh` 檔案中的 **Configurations** 設定。
-  - 若你不確定 **Configurations** 如何填寫，請參考 [clash-setting.md](clash-setting.md) 文件。
+  - 若你不確定 **Configurations** 如何填寫，請參考 [clash-setting.md](clash-setting-CN.md) 文件。
 
 - 接著，請在你的爬蟲程式中加入此函式。
 

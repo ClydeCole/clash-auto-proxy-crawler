@@ -19,7 +19,7 @@ sudo apt install jq    # Debian / Ubuntu
 ```
 
 **Step 2:** Edit the **Configurations** section in the `random-switch.sh` file.
-If you're not sure how to fill in the **Configurations**, please refer to [clash-setting.md](clash-setting.md).
+If you're not sure how to fill in the **Configurations**, please refer to [clash-setting.md](clash-setting-EN.md).
 
 **Step 3:** Add the following function to your crawler:
 
